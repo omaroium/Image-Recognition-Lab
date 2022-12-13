@@ -12,6 +12,15 @@ app = Flask(  # Create a flask app
 
 config = {
 
+  'apiKey': "AIzaSyC-J-OBtSdN1yXStW7VBIe_jLTOOQNtXgs",
+  'authDomain': "image-rec-5f145.firebaseapp.com",
+  'databaseURL': "https://image-rec-5f145-default-rtdb.europe-west1.firebasedatabase.app",
+  'projectId': "image-rec-5f145",
+  'storageBucket': "image-rec-5f145.appspot.com",
+  'messagingSenderId': "595155431056",
+  'appId': "1:595155431056:web:01db656ea6eb2ff5853215",
+  'measurementId': "G-8450FX2NB0",
+  "databaseURL":"https://image-rec-5f145-default-rtdb.europe-west1.firebasedatabase.app/"
 }
 
 firebase = pyrebase.initialize_app(config)
@@ -29,7 +38,7 @@ def login():
 
 		return redirect(url_for("home"))
 	else:
-  	return render_template('login.html')
+  	     return render_template('login.html')
 
 
 @app.route('/home')
